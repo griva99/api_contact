@@ -39,7 +39,6 @@ Route::post('/contactos', function (Request $request) {
     $contacto->nombre = $request->input('nombre');
     $contacto->correo = $request->input('correo');
     $contacto->telefono = $request->input('telefono');
-    $contacto->mensaje = $request->input('mensaje');
     $contacto->save();
 
     return response()->json(['message' => 'Contacto agregado correctamente']);
